@@ -1,35 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import NewInput from "./components/new_input";
+import ListInput from "./components/list_input";
+import Title from "./components/title";
+
+import BGdesktoplight from "./assets/bg-desktop-light.jpg";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="w-full min-h-screen flex flex-col bg-gray-100">      
+      <div
+        className="w-full h-[40vh] bg-cover bg-center"
+        style={{ backgroundImage: `url(${BGdesktoplight})` }}
+      >        
+        <NewInput className="p-10"/>
+        <ListInput className="p-10" />
+      </div>   
+    </div>
+  );
 }
 
-export default App
+export default App;
